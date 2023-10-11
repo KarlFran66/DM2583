@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 
 data = []
-with open('phrased_food_sentences.txt', 'r', encoding='utf-8') as file:
+with open('normalized_food_sentences(mapped).txt', 'r', encoding='utf-8') as file:
     for line in file:
         words = line.strip().split(' ')
         data.append(words)
@@ -16,5 +16,5 @@ wordcloud.generate(text)
 plt.figure(figsize=(10, 5))
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis("off")
-wordcloud.to_file("food_reviews_wordcloud.png")
+wordcloud.to_file("food_reviews_wordcloud(mapped).png")
 plt.show()
